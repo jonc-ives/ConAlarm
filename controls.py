@@ -27,6 +27,12 @@ class AlarmController:
 		self.mongo = self.new_connection()
 		self.threads = {}
 		self.thread_flags = thread_flags
+		self.initialize_threads()
+
+	def initialize_threads(self):
+		alarms, useless = self.get_alarms()
+		for alarm in alarms:
+			if alarm["repeat"]: self.start_alarm_thread(alarm)
 
 	# remember to close connection
 	def new_connection(self, log=False):
