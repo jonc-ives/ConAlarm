@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Wake the Fuck Up :)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="static/index.css" type="text/css" />
+</head>
+
+<body>
+	<div id="dash" class="active">
+		<div id="add" onclick="addAlarm()"><h3 id="add-text">New</h3></div>
+	</div>
+
+	<div id="edit" class="inactive">
+		<div id="edit-pane">
+			<input type="text" id="edit-title" value="Untitled" />
+			<div id="time-grid">
+				<select id="hour">
+					<option value="00">12</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+				</select>
+				<select id="mint">
+					<option value="00">00</option>
+					<option value="05">05</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="35">35</option>
+					<option value="40">40</option>
+					<option value="45">45</option>
+					<option value="50">50</option>
+					<option value="55">55</option>
+				</select>
+				<div id="am" onclick="toggleMM('am')"><h3>am</h3></div>
+				<div id="pm" onclick="toggleMM('pm')"><h3>pm</h3></div>
+			</div>
+			<div id="repeat-grid">
+				<div id="d" onclick="toggleRepeat('d')"><h3>S</h3></div>
+				<div id="m" onclick="toggleRepeat('m')"><h3>M</h3></div>
+				<div id="t" onclick="toggleRepeat('t')"><h3>T</h3></div>
+				<div id="w" onclick="toggleRepeat('w')"><h3>W</h3></div>
+				<div id="r" onclick="toggleRepeat('r')"><h3>R</h3></div>
+				<div id="f" onclick="toggleRepeat('f')"><h3>F</h3></div>
+				<div id="s" onclick="toggleRepeat('s')"><h3>S</h3></div>
+			</div>
+			<div id="buttons">
+				<div id="cancel" onclick="closeEditor()"><h3>Cancel</h3></div>
+				<div id="button-box">
+					<div id="delete" onclick="deleteAlarm()"><h3>Delete</h3></div>
+					<div id="save" onclick="saveChanges()"><h3>Save</h3></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fire" class="inactive">
+		<div id="title-box">
+			<h3 id="title-time"></h3>
+			<h3 id="title-title"></h3>
+			<h3 id="mission-left"></h3>
+		</div>
+		<div id="tile-box">
+			<div id="m0" onclick="select_tile(0)"></div>
+			<div id="m1" onclick="select_tile(1)"></div>
+			<div id="m2" onclick="select_tile(2)"></div>
+			<div id="m3" onclick="select_tile(3)"></div>
+			<div id="m4" onclick="select_tile(4)"></div>
+			<div id="m5" onclick="select_tile(5)"></div>
+			<div id="m6" onclick="select_tile(6)"></div>
+			<div id="m7" onclick="select_tile(7)"></div>
+			<div id="m8" onclick="select_tile(8)"></div>
+			<div id="m9" onclick="select_tile(9)"></div>
+			<div id="m10" onclick="select_tile(10)"></div>
+			<div id="m11" onclick="select_tile(11)"></div>
+			<div id="m12" onclick="select_tile(12)"></div>
+			<div id="m13" onclick="select_tile(13)"></div>
+			<div id="m14" onclick="select_tile(14)"></div>
+			<div id="m15" onclick="select_tile(15)"></div>
+			<div id="m16" onclick="select_tile(16)"></div>
+			<div id="m17" onclick="select_tile(17)"></div>
+			<div id="m18" onclick="select_tile(18)"></div>
+			<div id="m19" onclick="select_tile(19)"></div>
+			<div id="m20" onclick="select_tile(20)"></div>
+			<div id="m21" onclick="select_tile(21)"></div>
+			<div id="m22" onclick="select_tile(22)"></div>
+			<div id="m23" onclick="select_tile(23)"></div>
+			<div id="m24" onclick="select_tile(24)"></div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="./static/index.js"></script>
+
+</html>
+
+<!-- <div class="pane" id="bsonid">
+	<div class="pane-top">
+		<div class="alarm">
+			<h3 class="alarm-fires">7:30am</h3>
+			<h3 class="alarm-title">8 hours</h3>
+		</div>
+		<div class="settings" onclick=""></div>
+	</div>
+	<div class="pane-bottom">
+		<ul class="repeat-list">
+			<li class="repeat-item active-day">S</li>
+			<li class="repeat-item active-day">M</li>
+			<li class="repeat-item active-day">T</li>
+			<li class="repeat-item inactive-day">W</li>
+			<li class="repeat-item active-day">R</li>
+			<li class="repeat-item inactive-day">F</li>
+			<li class="repeat-item inactive-day">S</li>
+		</ul>
+		<h3 class="time-left">8 hours</h3>
+	</div>
+</div>
+ -->
