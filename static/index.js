@@ -1,6 +1,6 @@
 var alarms = {}
 var activeEdit = ""
-var static_server = 'http://localhost:5000'
+var static_server = 'http://127.168.0.23:5000'
 
 var buildPane = function(alarmObj) {
 	// create the parent pane
